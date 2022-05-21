@@ -1,0 +1,145 @@
+// variables
+$color-white: #fff;
+$color-black: #000;
+$color-black-light: #474747;
+$color-accent: #fcff65;
+$color-accent-dark: #f6fa2a;
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $color-white;
+	color: $color-black;
+	font-family: 'Nunito', sans-serif;
+}
+
+a {
+	color: inherit;
+}
+
+nav {
+	background-color: $color-accent;
+	padding: clamp(0.8rem, 1.5rem, 10vh);
+	// padding: 1.7rem;
+	font-family: 'Heebo', sans-serif;
+	display: flex;
+
+	a {
+		padding: 0 1.2rem;
+		text-decoration: none;
+		align-items: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+
+		&:hover {
+			color: $color-black-light;
+		}
+	}
+
+	.dark-mode-toggle {
+		background-color: $color-black;
+		color: $color-white;
+		margin-left: auto;	
+		border: none;
+		border-radius: 0.4rem;
+		padding: 0.2rem 0.3rem;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $color-black-light;
+		}
+	}
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	overflow: hidden;
+	padding: 3rem 1rem;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	background-size: cover;
+
+	& > * {
+		z-index: 1;
+		position: relative;
+	}
+
+	h1 {
+		font-family: 'Caveat Brush', cursive;
+		font-size: 2.5rem;
+		max-width: clamp(2rem, 26ch, 68vw);
+		padding: 0;
+		margin: 0;
+	}
+
+	p {
+		padding: 0;
+		margin: 0;
+	}
+
+	img {
+		display: flex;
+		margin-left: auto;
+		align-self: flex-start;
+	}
+
+	.bg-circle {
+		z-index: 0;
+		position: absolute;
+		border-radius: 100%;
+		background: linear-gradient(0deg, $color-accent 0%, $color-accent-dark 100%);
+	}
+
+	.bg-circle-1 {
+		height: clamp(20rem, 30rem, 60rem);
+		width: clamp(20rem, 30rem, 60rem);
+		bottom: -15rem;
+		left: -15rem;
+	}
+
+	.bg-circle-2 {
+		height: 35rem;
+		width: 35rem;
+		top: -15rem;
+		right: -15rem;
+	}
+
+	.bg-circle-3 {
+		height: 15rem;
+		width: 15rem;
+		bottom: -10rem;
+		right: 0%;
+	}
+
+	.bg-circle-4 {
+		height: 10rem;
+		width: 10rem;
+		top: -5rem;
+		right: 65%;
+	}
+
+	.bg-circle-5 {
+		height: 5rem;
+		width: 5rem;
+		top: -15rem;
+		right: 70%;
+		background: linear-gradient(0deg, $color-black-light 0%, $color-black 100%);
+	}
+}
+
+@media (min-width: 50em) {
+	header {
+		padding: 3rem 1rem;
+
+		h1 {
+			max-width: 100%;
+			padding: 1rem 0;
+		}
+	}
+}

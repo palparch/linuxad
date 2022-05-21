@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+nav {
+  background-color: #fcff65;
+  padding: clamp(0.8rem, 1.5rem, 10vh);
+  font-family: "Heebo", sans-serif;
+  display: flex;
+}
+nav a {
+  padding: 0 1.2rem;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+nav a:hover {
+  color: #474747;
+}
+nav .dark-mode-toggle {
+  background-color: #000;
+  color: #fff;
+  margin-left: auto;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.3rem;
+  cursor: pointer;
+}
+nav .dark-mode-toggle:hover {
+  background-color: #474747;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 1rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+header > * {
+  z-index: 1;
+  position: relative;
+}
+header h1 {
+  font-family: "Caveat Brush", cursive;
+  font-size: 2.5rem;
+  max-width: clamp(2rem, 26ch, 68vw);
+  padding: 0;
+  margin: 0;
+}
+header p {
+  padding: 0;
+  margin: 0;
+}
+header img {
+  display: flex;
+  margin-left: auto;
+  align-self: flex-start;
+}
+header .bg-circle {
+  z-index: 0;
+  position: absolute;
+  border-radius: 100%;
+  background: linear-gradient(0deg, #fcff65 0%, #f6fa2a 100%);
+}
+header .bg-circle-1 {
+  height: 30rem;
+  width: 30rem;
+  bottom: -15rem;
+  left: -15rem;
+}
+header .bg-circle-2 {
+  height: 35rem;
+  width: 35rem;
+  top: -15rem;
+  right: -15rem;
+}
+header .bg-circle-3 {
+  height: 15rem;
+  width: 15rem;
+  bottom: -10rem;
+  right: 0%;
+}
+header .bg-circle-4 {
+  height: 10rem;
+  width: 10rem;
+  top: -5rem;
+  right: 65%;
+}
+header .bg-circle-5 {
+  height: 5rem;
+  width: 5rem;
+  top: -15rem;
+  right: 70%;
+  background: linear-gradient(0deg, #474747 0%, #000 100%);
+}
+
+@media (min-width: 50em) {
+  header {
+    padding: 3rem 1rem;
+  }
+  header h1 {
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
