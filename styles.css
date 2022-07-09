@@ -1,13 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #fff;
   color: #000;
   font-family: "Nunito", sans-serif;
+  height: 200vh;
 }
 
 a {
-  color: inherit;
+  color: #00b3ff;
+  transition: color 125ms;
+}
+a:hover {
+  color: #0073ff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 nav {
@@ -25,6 +41,7 @@ nav a {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  color: #000;
 }
 nav a:hover {
   color: #474747;
@@ -43,8 +60,6 @@ nav .dark-mode-toggle:hover {
 }
 
 header {
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
   overflow: hidden;
   padding: 3rem 1rem;
@@ -60,18 +75,13 @@ header > * {
 header h1 {
   font-family: "Caveat Brush", cursive;
   font-size: 2.5rem;
-  max-width: clamp(2rem, 26ch, 68vw);
   padding: 0;
   margin: 0;
-}
-header p {
-  padding: 0;
-  margin: 0;
+  text-align: center;
 }
 header img {
   display: flex;
-  margin-left: auto;
-  align-self: flex-start;
+  margin: 1rem auto;
 }
 header .bg-circle {
   z-index: 0;
@@ -103,21 +113,101 @@ header .bg-circle-4 {
   top: -5rem;
   right: 65%;
 }
-header .bg-circle-5 {
-  height: 5rem;
-  width: 5rem;
-  top: -15rem;
-  right: 70%;
-  background: linear-gradient(0deg, #474747 0%, #000 100%);
+
+section {
+  padding: 3rem 1rem;
+}
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+section p {
+  font-size: 1.2rem;
+}
+
+.why-linux {
+  background-color: #000;
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+}
+.why-linux .reasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+}
+.why-linux .reasons div {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(to bottom right, #fcff65, #f6fa2a);
+  color: #000;
+}
+.why-linux .reasons div h3 {
+  font-size: 1.2rem;
+}
+.why-linux .reasons div p {
+  font-size: 1.1rem;
+}
+
+.distro-confusion {
+  margin: -15rem 1rem 1rem 1rem;
+}
+.distro-confusion .distros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+}
+.distro-confusion .distros div img {
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.distro-confusion .distros div img:hover {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 20px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+footer {
+  background-color: #fcff65;
+  padding: 3rem 2rem;
+}
+
+.spacer {
+  aspect-ratio: 900/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+}
+
+.layer1 {
+  position: absolute;
+  top: 20%;
+  background-image: url("images/wave-haikei-top.svg");
+}
+
+.layer2 {
+  background-image: url("images/wave-haikeiorig.svg");
 }
 
 @media (min-width: 50em) {
   header {
+    display: flex;
     padding: 3rem 1rem;
+    flex-wrap: wrap;
+    width: 100%;
   }
   header h1 {
-    max-width: 100%;
     padding: 1rem 0;
+    text-align: left;
+    max-width: 90%;
+    font-size: 3.5rem;
+  }
+  header img {
+    display: flex;
+    margin-right: 0;
+    align-self: flex-start;
   }
 }
 
