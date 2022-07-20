@@ -182,7 +182,7 @@ section {
 }
 
 .distro-confusion {
-	margin: -15rem 1rem 1rem 1rem;
+	margin: -25vw 1rem 1rem 1rem;
 
 	.distros {
 		display: grid;
@@ -222,6 +222,21 @@ footer {
 
 .layer2 {
 	background-image: url('images/wave-haikeiorig.svg');
+}
+
+::selection {
+	background-color: rgba($color-blue, 0.6);
+	color: $color-black;
+}
+
+::-moz-selection { /* Code for Firefox */
+	background-color: rgba($color-blue, 0.6);
+	color: $color-black;
+}
+
+::-webkit-selection { /* Code for Firefox */
+	background-color: rgba($color-blue, 0.6);
+	color: $color-black;
 }
 
 @media (min-width: 50em) {
